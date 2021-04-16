@@ -1,7 +1,16 @@
 # CryptoExchangeBot
+Bot that was inspired by Kalle Hallden's video found here: https://www.youtube.com/watch?v=bARCE45FM4s&t=220s
+Goal of this bot is to be able to give it a certain amount of money and see if it can post a profit.
 
 ## Build Status
 [![.NET](https://github.com/ChaseStruse/CryptoExchangeBot/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ChaseStruse/CryptoExchangeBot/actions/workflows/dotnet.yml)
+
+## How to run the project
+- Ensure you have .Net 5.x.x installed
+- Clone the latest version of the repo
+- Using your terminal navigate to the CryptoExchangeBot/CryptoExchangeBot folder
+- Run dotnet test, this will ensure all tests are passing
+- Run dotnet run, to run the application
 
 ## Workflow
 This section will layout how all the data flows through the program
