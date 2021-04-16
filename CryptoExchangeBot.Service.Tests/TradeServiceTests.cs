@@ -6,7 +6,7 @@ namespace CryptoExchangeBot.Service.Tests
 {
     public class TradeServiceTests
     {
-        private TradeService _sut;
+        private ITradeService _sut;
         [SetUp]
         public void Setup()
         {

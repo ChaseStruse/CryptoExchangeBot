@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CryptoExchangeBot.Service
 {
@@ -7,11 +8,25 @@ namespace CryptoExchangeBot.Service
     {
         bool Buy(List<double> lastThreeMonthHighs, double currentPrice);
     }
-    public class TradeService
+    public class TradeService : ITradeService
     {
         public bool Buy(List<double> lastThreeMonthHighs, double currentPrice)
         {
-            throw new NotImplementedException();
+            var buy = false;
+            var total = 0.0;
+
+            lastThreeMonthHighs.Add(currentPrice);
+
+            foreach(var high in lastThreeMonthHighs)
+            {
+                total += high;
+            }
+
+            var average = total / lastThreeMonthHighs.Count;
+
+            if (average < currentPrice) buy = true;
+
+            return buy;
         }
     }
 }
