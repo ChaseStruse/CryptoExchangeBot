@@ -14,7 +14,7 @@ namespace CryptoExchangeBot.Service.Tests
         }
 
         [Test]
-        public void BuyReturnsTrue_WhenGiven_CryptosLastThreeMonthPrices()
+        public void DetermineBuyOrSellReturnsTrue_WhenGiven_CryptosLastThreeMonthPricesThatIndicateABuy()
         {
             var lastThreeMonthHighs = new List<double>()
             {
@@ -27,7 +27,7 @@ namespace CryptoExchangeBot.Service.Tests
 
             var currentPrice = 1.35;
 
-            var actual = _sut.Buy(lastThreeMonthHighs, currentPrice);
+            var actual = _sut.DetermineBuyOrSell(lastThreeMonthHighs, currentPrice);
 
             actual.Should().Be(true);
         }

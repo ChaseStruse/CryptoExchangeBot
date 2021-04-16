@@ -6,11 +6,11 @@ namespace CryptoExchangeBot.Service
 {
     public interface ITradeService
     {
-        bool Buy(List<double> lastThreeMonthHighs, double currentPrice);
+        bool DetermineBuyOrSell(List<double> lastThreeMonthHighs, double currentPrice);
     }
     public class TradeService : ITradeService
     {
-        public bool Buy(List<double> lastThreeMonthHighs, double currentPrice)
+        public bool DetermineBuyOrSell(List<double> lastThreeMonthHighs, double currentPrice)
         {
             var buy = false;
             var total = 0.0;
