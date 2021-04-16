@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  working-directory: ./CryptoExchangeBot
+  working-directory: ./CryptoExchangeBot/CryptoExchangeBot
   
 jobs:
   build:
