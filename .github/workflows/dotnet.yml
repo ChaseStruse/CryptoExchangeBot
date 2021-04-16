@@ -6,13 +6,15 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  working-directory: ./CryptoExchangeBot
+  
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - working-directory: CryptoExchangeBot
     - uses: actions/checkout@v2
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
